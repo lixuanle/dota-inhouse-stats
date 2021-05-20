@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react"
+import { readRemoteFile } from 'react-papaparse'
+
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import readCSV from "./util/parser"
+
+const App = () => {
+
+  const [csvData, setCsvData] = useState([]);
+
+  useEffect(() => {
+    const getCSV = async () => {
+      const results = await readCSV();
+      console.log(results);
+    }
+    getCSV();
+  })
+  
+
   return (
     <div className="App">
       <header className="App-header">
