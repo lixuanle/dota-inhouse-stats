@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { readRemoteFile } from 'react-papaparse'
 
 import logo from './logo.svg';
 import './App.css';
@@ -12,12 +11,16 @@ const App = () => {
 
   useEffect(() => {
     const getCSV = async () => {
-      const results = await readCSV();
-      console.log(results);
+      const { listOfGames, playerStats } = await readCSV();
+      console.log(listOfGames);
+      setCsvData(listOfGames);
     }
     getCSV();
-  })
+  }, [])
+
+  useEffect(() => {
   
+  }, [csvData])
 
   return (
     <div className="App">
