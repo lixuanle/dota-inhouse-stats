@@ -1,0 +1,445 @@
+﻿GAME,RADIANT,RADIANT_KILLS,RADIANT_DEATHS,RADIANT_ASSISTS,RADIANT_HEROES,RADIANT_DAMAGE,DIRE,DIRE_KILLS,DIRE_DEATHS,DIRE_ASSISTS,DIRE_HEROES,DIRE_DAMAGE,WINNING_PLAYERS
+1,Bsu,5,6,2,ursa,16472,Remia,13,3,21,necro,40748,Remia
+,Shani,4,8,3,qop,33286,Happynut,5,4,17,weaver,19257,Happynut
+,Jeleto,3,11,7,bb,13433,Yoshioka,12,1,14,razor,40657,Yoshioka
+,nanoir,2,9,7,ogre,12036,Lostwhale,13,9,18,lich,23287,Lostwhale
+,geese,7,13,7,rubick,31403,pain peko,4,4,19,phoenix,7021,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+2,Bsu,23,0,4,jugg,41290,Jeleto,0,15,3,centaur,5275,Bsu
+,geese,1,5,21,grim,9150,Lostwhale,0,7,6,rubick,13274,geese
+,nanoir,2,6,7,cm,7922,Remia,13,2,2,slark,23442,nanoir
+,Monta,5,0,13,kka,16160,pain peko,1,5,13,lich,14084,Monta
+,Happynut,2,7,16,tide,10926,Yoshioka,4,4,3,puck,16004,Happynut
+,Winner: ,Radiant,,,,,,,,,,,
+3,Remia,21,4,11,am,51440,Bsu,45,5,7,riki,134327,Bsu
+,Jeleto,7,17,27,centaur,27287,Monta,1,7,27,magnus,15697,Monta
+,Lostwhale,3,11,23,silencer,23751,Happynut,1,14,23,doom,17819,Happynut
+,Yoshioka,8,9,19,wr,55488,nanoir,2,8,23,lich,15535,nanoir
+,pain peko,1,13,25,phoenix,23050,geese,5,8,31,shaman,26173,geese
+,Winner: ,Dire,,,,,,,,,,,
+4,Bsu,13,3,12,troll,49351,Nixnala,6,11,20,mars,33980,Bsu
+,geese,8,12,14,oracle,15978,Yoshioka,14,2,16,vs,39682,geese
+,Monta,3,5,17,kka,31748,pain peko,4,11,21,wr,18143,Monta
+,Happynut,5,12,11,sk,26226,Remia,18,1,16,jugg,43519,Happynut
+,nanoir,2,14,7,cm,9770,Lostwhale,4,6,21,aa,25988,nanoir
+,Winner: ,Radiant,,,,,,,,,,,
+5,Bsu,14,1,11,weaver,34858,Remia,15,4,10,luna,41650,Remia
+,geese,3,8,18,shaman,15131,Lostwhale,5,9,17,lich,13629,Lostwhale
+,tpham,8,5,11,puck,23684,pain peko,3,6,11,sd,11787,pain peko
+,nanoir,1,7,8,cm,9272,Yoshioka,4,4,12,viper,24590,Yoshioka
+,Nixnala,6,9,8,mars,15772,Monta,2,9,13,sk,14449,Monta
+,Winner: ,Dire,,,,,,,,,,,
+6,tpham,12,1,9,jugg,27215,Bsu,15,7,3,troll,32151,tpham
+,Yoshioka,6,2,16,storm,21012,pain peko,1,7,17,undying,8510,Yoshioka
+,Nixnala,2,7,15,ns,13749,Monta,3,6,13,magnus,6340,Nixnala
+,Remia,12,4,16,grim,25978,Jeleto,1,7,8,mars,5704,Remia
+,Lostwhale,1,7,17,ogre,13707,nanoir,0,7,12,lich,7124,Lostwhale
+,Winner: ,Radiant,,,,,,,,,,,
+7,Bsu,9,0,2,riki,8774,Remia,3,2,2,necro,11496,Bsu
+,pain peko,3,1,7,ww,5636,nanoir,0,5,2,cm,2504,pain peko
+,Jeleto,0,3,9,tide,6149,dream,0,6,4,rubick,5597,Jeleto
+,Monta,1,1,7,kka,4368,tpham,2,0,1,pl,4629,Monta
+,Yoshioka,3,0,5,lesh,9715,Lostwhale,0,3,3,slardar,2062,Yoshioka
+,Winner: ,Radiant,,,,,,,,,,,
+8,Remia,8,5,7,zeus,33959,pain peko,3,5,17,oracle,7099,pain peko
+,Lostwhale,4,6,5,jugg,17198,tpham,9,0,17,rubick,25687,tpham
+,nanoir,2,7,7,lich,12771,Bsu,5,2,9,arc,26035,Bsu
+,Monta,7,7,11,bb,26918,Yoshioka,11,5,10,axe,21114,Yoshioka
+,dream,1,6,12,io,4926,Jeleto,2,10,13,drow,14219,Jeleto
+,Winner: ,Dire,,,,,,,,,,,
+9,nanoir,2,7,14,cm,28891,Jeleto,7,10,23,tide,27526,Jeleto
+,Bsu,14,5,14,invoker,66138,Remia,26,2,9,naga,61955,Remia
+,tpham,11,8,17,faceless,38990,Yoshioka,3,10,17,ww,19217,Yoshioka
+,dream,4,13,16,ogre,16641,Monta,4,8,26,kka,34008,Monta
+,Lostwhale,4,12,16,centaur,18884,pain peko,3,8,27,jakiro,39094,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+10,Bsu,9,2,8,pa,20525,Monta,2,4,6,brew,10092,Bsu
+,Yoshioka,4,2,2,timber,14768,dream,3,1,5,ember,16437,Yoshioka
+,Miyuki,4,2,9,ogre,7300,pain peko,2,6,7,oracle,5532,Miyuki
+,Nixnala,2,4,8,magnus,8320,geese,0,7,9,grim,9019,Nixnala
+,nanoir,6,3,6,lich,8765,Lostwhale,5,7,3,tide,8813,nanoir
+,Winner: ,Radiant,,,,,,,,,,,
+11,Miyuki,1,1,12,warlock,8709,Bsu,4,6,6,riki,13248,Miyuki
+,Remia,13,2,10,pugna,22090,Lostwhale,0,6,4,sd,8434,Remia
+,dream,3,4,12,mars,12513,Yoshioka,2,6,6,doom,12396,dream
+,Kana,10,2,11,spectre,17728,nanoir,6,6,3,lich,11954,Kana
+,pain peko,3,6,16,jakiro,11940,Monta,3,6,3,wr,11909,pain peko
+,Winner: ,Radiant,,,,,,,,,,,
+12,Monta,3,13,14,centaur,19109,Bsu,22,3,15,ursa,64402,Bsu
+,Remia,4,7,13,vs,28280,dream,6,3,22,lc,19185,dream
+,Lostwhale,2,11,10,ogre,16353,nanoir,3,9,14,cm,11406,nanoir
+,Miyuki,8,8,10,grim,15177,Yoshioka,12,2,19,invoker,39542,Yoshioka
+,Kana,9,5,8,weaver,37533,pain peko,1,11,23,es,8627,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+13,Yoshioka,2,3,4,puck,18844,Bsu,5,0,13,naix,21056,Bsu
+,Nixnala,0,6,3,ns,7498,geese,8,1,10,mirana,14162,geese
+,Remia,4,4,4,troll,19518,nanoir,3,1,9,lich,12301,nanoir
+,Happynut,3,9,4,clock,12202,Jeleto,1,3,14,tide,12226,Jeleto
+,Lostwhale,0,2,7,warlock,7121,pain peko,7,4,11,viper,24222,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+14,Bsu,18,2,23,sk,56823,Lostwhale,2,13,7,shaman,15222,Bsu
+,Jeleto,4,6,28,tide,20231,Nixnala,4,17,10,doom,18521,Jeleto
+,geese,10,6,31,mirana,23231,Yoshioka,7,5,5,beast,84387,geese
+,nanoir,7,4,21,lich,16104,pain peko,4,13,11,sd,15796,nanoir
+,Happynut,17,4,16,weaver,40670,Remia,5,8,8,pl,28065,Happynut
+,Winner: ,Radiant,,,,,,,,,,,
+15,Yoshioka,15,2,16,pugna,38921,Bsu,11,6,4,pa,25536,Yoshioka
+,pain peko,4,5,22,grim,14766,tpham,1,8,9,nyx,12546,pain peko
+,Remia,11,3,16,omni,16367,Monta,2,6,11,magnus,12253,Remia
+,Jeleto,9,5,21,centaur,22091,Lostwhale,1,9,8,tide,13640,Jeleto
+,Justin,4,3,27,lion,12907,nanoir,0,14,9,cm,15100,Justin
+,Winner: ,Radiant,,,,,,,,,,,
+16,tpham,1,11,25,mars,20285,Bsu,20,7,10,riki,47568,tpham
+,Lostwhale,3,7,21,warlock,13337,Yoshioka,12,5,12,vs,36339,Lostwhale
+,Justin,6,12,23,willow,12604,nanoir,2,7,9,lich,1633,Justin
+,Remia,21,2,12,tb,61169,Jeleto,0,11,18,tusk,13583,Remia
+,Monta,8,8,22,zeus,53860,pain peko,5,10,16,oracle,12017,Monta
+,Winner: ,Radiant,,,,,,,,,,,
+17,Bsu,5,0,4,am,7841,Justin,2,1,8,rubick,9213,Bsu
+,Jeleto,1,5,7,tide,6605,Lostwhale,0,3,2,ogre,3483,Jeleto
+,pain peko,0,0,4,hoodwink,4648,Remia,4,3,5,faceless,8050,pain peko
+,nanoir,2,3,7,grim,9275,tpham,0,3,3,storm,4867,nanoir
+,Yoshioka,3,2,4,invoker,12191,Monta,3,3,1,enigma,6047,Yoshioka
+,Winner: ,Radiant,,,,,,,,,,,
+18,pain peko,5,13,18,hoodwink,23050,Bsu,12,8,30,sniper,72188,Bsu
+,Jeleto,7,17,24,tide,44364,Remia,11,7,44,rubick,44438,Remia
+,Yoshioka,10,5,16,qop,52423,Lostwhale,11,12,33,lich,26873,Lostwhale
+,geese,1,19,19,shaman,15988,Nixnala,9,12,32,mars,43257,Nixnala
+,tpham,20,7,4,jugg,58625,Monta,18,5,33,pa,77816,Monta
+,Winner: ,Dire,,,,,,,,,,,
+19,Bsu,2,1,5,drow,12081,Lostwhale,2,2,8,warlock,6612,Bsu
+,Yoshioka,3,2,3,kotl,11387,Monta,10,4,1,sky,11755,Yoshioka
+,tpham,7,3,5,naix,13608,Remia,4,3,3,faceless,10131,tpham
+,Happynut,1,8,9,necro,8517,pain peko,3,5,5,aa,7960,Happynut
+,Nixnala,5,6,6,sd,8919,Jeleto,1,4,5,centaur,9010,Nixnala
+,Winner: ,Radiant,,,,,,,,,,,
+20,Nixnala,7,3,14,magnus,10349,Yoshioka,4,6,2,pango,19771,Nixnala
+,nanoir,5,4,18,cm,10676,geese,4,13,6,mirana,19326,nanoir
+,Bsu,12,1,17,wk,32801,Lostwhale,0,9,4,lich,14721,Bsu
+,pain peko,5,8,22,grim,11536,dream,2,10,6,doom,15686,pain peko
+,Remia,12,0,11,blood,24901,Monta,4,6,2,pa,14120,Remia
+,Winner: ,Radiant,,,,,,,,,,,
+21,Monta,8,0,16,brew,14655,Bsu,7,4,10,am,19240,Monta
+,Lostwhale,1,6,22,tide,11483,Nixnala,2,10,3,ns,7461,Lostwhale
+,geese,8,2,12,oracle,11045,dream,4,5,7,grim,9990,geese
+,Remia,14,2,10,pa,35311,Yoshioka,5,3,3,invoker,24004,Remia
+,pain peko,2,8,12,jakiro,12784,nanoir,0,11,5,ogre,8075,pain peko
+,Winner: ,Radiant,,,,,,,,,,,
+22,Bsu,3,7,4,slark,17802,pain peko,3,4,19,warlock,11033,pain peko
+,geese,3,11,9,oracle,10386,Remia,7,2,20,willow,26867,Remia
+,nanoir,3,7,6,lich,20362,dream,14,3,21,spectre,51206,dream
+,Monta,0,5,4,kka,19148,Lostwhale,3,5,17,tide,12228,Lostwhale
+,Nixnala,3,10,8,magnus,12705,Yoshioka,13,0,13,tinker,49085,Yoshioka
+,Winner: ,Dire,,,,,,,,,,,
+23,tpham,25,3,16,sniper,48586,Bsu,12,8,4,viper,33179,tpham
+,Lostwhale,4,6,27,ogre,10704,Happynut,3,11,8,tide,10892,Lostwhale
+,Monta,8,3,24,brew,18061,nanoir,1,13,14,silencer,12002,tpham
+,Yoshioka,4,3,31,gyro,17660,pain peko,1,14,13,cm,10767,Yoshioka
+,dream,10,7,18,mars,18556,Remia,4,5,2,naix,10742,dream
+,Winner: ,Radiant,,,,,,,,,,,
+24,Lostwhale,2,11,22,ogre,13870,Bsu,22,5,16,drow,76906,Bsu
+,Remia,23,9,14,od,48904,pain peko,4,8,21,hoodwink,17916,pain peko
+,dream,4,11,21,grim,18320,Happynut,6,15,18,lc,14237,Happynut
+,nanoir,8,12,15,zeus,41405,Yoshioka,4,7,29,disruptor,14117,Yoshioka
+,Monta,3,11,16,puck,25459,tpham,18,5,20,rubick,51090,tpham
+,Winner: ,Dire,,,,,,,,,,,
+25,Yoshioka,13,2,7,vs,21172,tpham,2,6,18,enigma,16166,Yoshioka
+,Lostwhale,7,7,15,ogre,15741,Remia,13,7,18,tusk,20139,Lostwhale
+,geese,4,12,16,viper,23682,Happynut,8,11,10,weaver,23346,geese
+,Jeleto,3,7,18,tide,19424,nanoir,2,4,5,medusa,13241,Jeleto
+,dream,6,7,13,alch,18892,pain peko,8,7,14,hoodwink,16788,dream
+,Winner: ,Radiant,,,,,,,,,,,
+26,Bsu,14,5,16,drow,51573,Remia,13,4,17,morph,40366,Remia
+,Yoshioka,7,11,25,gyro,24439,Jeleto,5,13,18,centaur,26626,Jeleto
+,tpham,5,10,18,tiny,15447,dream,14,4,12,naix,27602,dream
+,nanoir,6,8,15,razor,19303,Lostwhale,5,9,19,cm,21741,Lostwhale
+,Happynut,9,9,18,bb,42176,pain peko,5,12,15,es,20385,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+27,Bsu,12,1,12,spectre,24814,Happynut,2,9,7,lion,7096,Bsu
+,Yoshioka,11,4,2,od,18057,tpham,6,7,11,willow,9613,Yoshioka
+,Jeleto,3,5,13,underlord,13779,Remia,6,5,7,pugna,29824,Jeleto
+,nanoir,3,5,11,cm,9607,Lostwhale,3,8,4,mars,7693,nanoir
+,pain peko,5,6,15,oracle,8422,dream,3,5,9,ursa,11097,pain peko
+,Winner: ,Radiant,,,,,,,,,,,
+28,Remia,2,9,6,shaker,6724,dream,9,1,9,pa,18040,dream
+,tpham,1,1,2,am,2800,Bsu,8,0,13,ns,25301,Bsu
+,Yoshioka,6,5,3,dp,20728,nanoir,3,3,11,lich,6789,nanoir
+,Lostwhale,0,10,4,shaman,3736,Jeleto,7,4,8,dk,14669,Jeleto
+,Happynut,1,7,2,weaver,7942,pain peko,5,3,11,grim,8385,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+29,nanoir,5,6,15,ember,21755,Bsu,13,7,26,bh,56238,nanoir
+,Monta,5,13,21,kka,14095,geese,6,10,33,mirana,22073,Monta
+,dream,15,7,22,spectre,64336,chesticlez,8,8,9,od,30454,dream
+,Remia,11,15,23,pudge,33797,tpham,14,9,11,pa,60533,Remia
+,Yoshioka,8,8,21,ds,43776,pain peko,8,10,23,oracle,12613,Yoshioka
+,Winner: ,Radiant,,,,,,,,,,,
+30,Yoshioka,11,10,21,viper,26391,Bsu,2,10,23,tide,21453,Yoshioka
+,Monta,6,7,27,puck,30363,tpham,16,9,6,jugg,42439,Monta
+,Remia,18,7,16,faceless,41678,dream,10,7,11,lc,17479,Remia
+,nanoir,5,4,15,ember,21428,pain peko,4,10,14,hoodwink,22190,nanoir
+,Lostwhale,7,11,27,aa,24732,Happynut,6,11,12,storm,21225,Lostwhale
+,Winner: ,Radiant,,,,,,,,,,,
+31,Yoshioka,8,10,20,clock,33428,Bsu,19,5,6,tb,76116,Bsu
+,nanoir,9,2,16,ember,25992,pain peko,2,14,16,lion,11597,pain peko
+,Lostwhale,9,6,21,warlock,29971,Monta,6,6,23,brew,23419,Monta
+,Remia,6,5,17,jugg,30611,Happynut,5,9,11,storm,15758,Happynut
+,tpham,9,9,23,gyro,21442,dream,0,10,15,ogre,8125,dream
+,Winner: ,Dire,,,,,,,,,,,
+32,LISA,4,1,15,tide,10688,Yoshioka,4,2,13,snap,21465,LISA
+,Remia,10,6,9,riki,22387,Monta,0,10,5,magnus,5660,Remia
+,Lostwhale,2,2,11,warlock,11101,pain peko,3,6,9,hoodwink,13936,Lostwhale
+,geese,6,10,14,viper,20709,nanoir,4,5,5,ember,8915,geese
+,tpham,5,1,9,jugg,23495,Bsu,8,4,6,blood,27950,tpham
+,Winner: ,Radiant,,,,,,,,,,,
+33,Jeleto,0,15,3,centaur,13157,Yoshioka,3,0,18,ember,21435,Yoshioka
+,Paper,0,9,4,jakiro,8184,tpham,12,2,15,razor,23646,tpham
+,Monta,0,7,4,magnus,6221,geese,16,2,21,willow,21634,geese
+,Bsu,5,6,4,am,11372,Lostwhale,7,4,16,lich,11613,Lostwhale
+,pain peko,4,11,7,oracle,8397,Miyuki,9,2,17,underlord,17120,Miyuki
+,Winner: ,Dire,,,,,,,,,,,
+34,Yoshioka,20,5,15,timber,48411,Paper,4,11,19,cm,20087,Yoshioka
+,Lostwhale,5,15,25,lich,24065,Monta,10,9,29,brew,38531,Lostwhale
+,Miyuki,4,11,29,ogre,26238,geese,9,11,25,mirana,27572,Miyuki
+,Bsu,20,7,12,sven,46840,pain peko,10,11,14,magnus,19878,Bsu
+,Jeleto,4,11,22,dk,24303,tpham,16,12,21,viper,83241,Jeleto
+,Winner: ,Radiant,,,,,,,,,,,
+35,Miyuki,3,6,5,nyx,8339,Yoshioka,14,0,9,od,23341,Yoshioka
+,geese,2,8,3,grim,10624,Lostwhale,2,6,11,tide,7102,Lostwhale
+,pain peko,5,9,8,jakiro,12244,Monta,1,2,19,ogre,12298,Monta
+,nanoir,2,4,1,ember,6058,Bsu,6,2,9,spectre,12855,Bsu
+,tpham,4,4,7,drow,13099,Paper,6,7,5,lina,7584,Paper
+,Winner: ,Dire,,,,,,,,,,,
+36,geese,9,10,5,grim,11391,Bsu,8,3,8,razor,21977,Bsu
+,Monta,1,4,6,kka,6799,Yoshioka,4,4,15,underlord,12516,Yoshioka
+,Remia,7,2,6,naix,8179,Miyuki,9,4,8,lina,13739,Miyuki
+,pain peko,2,8,4,hoodwink,12614,Paper,2,7,17,lich,12560,Paper
+,Lostwhale,2,7,13,mars,11331,tpham,8,3,7,jugg,17016,tpham
+,Winner: ,Dire,,,,,,,,,,,
+37,Yoshioka,4,5,14,aa,20029,tpham,7,5,13,rubick,17282,tpham
+,Coolgav,5,6,4,mars,9998,Bsu,18,1,9,naix,36572,Bsu
+,Monta,5,5,7,sk,19994,Lostwhale,4,6,18,tide,13045,Lostwhale
+,Happynut,2,11,9,nyx,13656,chesticlez,3,5,6,od,12007,chesticlez
+,Remia,8,6,4,luna,25958,pain peko,1,7,17,ogre,7659,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+38,chesticlez,2,7,4,od,12990,Yoshioka,4,4,17,snap,12990,Yoshioka
+,pain peko,0,8,8,aa,6082,Coolgav,2,5,9,mars,6082,Coolgav
+,Remia,12,5,5,riki,53302,Bsu,18,0,10,wk,53302,Bsu
+,Lostwhale,1,14,8,pudge,19202,Paper,10,4,5,lina,19202,Paper
+,Monta,3,3,6,faceless,13008,tpham,3,5,21,jakiro,13008,tpham
+,Winner: ,Dire,,,,,,,,,,,
+39,dream,16,5,17,ember,50127,Bsu,16,7,15,naix,54397,Bsu
+,Lostwhale,7,11,19,aa,23792,Yoshioka,12,4,16,vs,50203,Yoshioka
+,Remia,9,6,18,magnus,40254,LISA,3,9,17,wd,12493,LISA
+,Monta,3,12,20,underlord,23298,Nixnala,6,9,20,doom,22788,Nixnala
+,Paper,4,10,19,lich,17875,pain peko,6,12,24,grim,18608,pain peko
+,Winner: ,Dire,,,,,,,,,,,
+40,Bsu,3,0,4,naix,6962,Lostwhale,1,5,4,grim,5919,Bsu
+,LISA,4,7,7,viper,9942,Monta,1,2,1,sk,8327,LISA
+,pain peko,5,4,7,jakiro,13333,Remia,6,3,4,razor,18327,pain peko
+,Nixnala,6,2,11,mars,10862,dream,1,5,5,spectre,7306,Nixnala
+,Yoshioka,4,0,6,doom,10117,Paper,2,7,6,warlock,9640,Yoshioka
+,Winner: ,Radiant,,,,,,,,,,,
+41,Yoshioka,3,1,5,ember,11911,Bsu,8,0,5,blood,14399,Bsu
+,Lostwhale,2,4,4,lina,8965,pain peko,4,6,9,jakiro,14546,pain peko
+,Remia,4,7,7,willow,9524,dream,4,1,4,jugg,7208,dream
+,Miyuki,2,7,7,mars,8949,Paper,1,6,8,wd,5847,Paper
+,tpham,4,5,3,troll,6356,Monta,5,2,10,brew,10420,Monta
+,Winner: ,Dire,,,,,,,,,,,
+42,Bsu,15,0,6,ursa,45048,dream,5,3,6,jugg,26294,Bsu
+,Lostwhale,1,5,12,tide,15080,pain peko,1,7,8,rubick,15054,Lostwhale
+,Nixnala,2,4,10,silencer,14297,Lester,8,6,6,dp,29344,Nixnala
+,Remia,3,6,12,magnus,9200,Yoshioka,1,2,7,sd,19902,Remia
+,chesticlez,0,5,3,od,14529,Monta,5,3,7,brew,29011,chesticlez
+,Winner: ,Radiant,,,,,,,,,,,
+43,Yoshioka,8,2,27,grim,29265,dream,2,11,5,rubick,17714,Yoshioka
+,Bsu,14,1,17,riki,54350,Remia,7,5,3,naga,33280,Bsu
+,nanoir,8,3,18,lich,25317,pain peko,1,7,3,phoenix,11810,nanoir
+,Happynut,6,5,23,qop,27867,chesticlez,4,12,1,od,16607,Happynut
+,Monta,9,4,27,doom,18931,Nixnala,1,10,7,centaur,18963,Monta
+,Winner: ,Radiant,,,,,,,,,,,
+44,Yoshioka,8,4,4,pango,24880,nanoir,5,6,15,lich,12053,nanoir
+,Monta,2,7,5,sk,13916,Bsu,8,0,12,am,27896,Bsu
+,pain peko,4,10,8,sd,11234,Happynut,2,10,9,wd,9634,Happynut
+,dream,7,5,9,luna,23691,Nixnala,6,7,19,tide,14116,Nixnala
+,LISA,3,5,7,willow,10060,Remia,8,1,4,naix,14483,Remia
+,Winner: ,Dire,,,,,,,,,,,
+45,pain peko,0,9,24,ogre,17419,Remia,13,11,7,axe,59067,pain peko
+,Bsu,29,3,11,spectre,93870,dream,8,10,17,lc,20793,Bsu
+,Nixnala,4,11,32,tide,27900,Happynut,5,13,12,lina,24038,Nixnala
+,nanoir,3,5,20,lich,18048,Yoshioka,9,6,18,od,44769,nanoir
+,Monta,17,10,17,sky,43323,LISA,3,14,14,grim,9895,Monta
+,Winner: ,Radiant,,,,,,,,,,,
+46,dream,4,5,5,jugg,22924,Yoshioka,8,1,17,puck,24872,Yoshioka
+,Nixnala,3,8,10,lich,16302,pain peko,1,4,22,shaman,9848,pain peko
+,Paper,3,7,3,ogre,14163,Lostwhale,6,10,17,aa,11786,Lostwhale
+,Bsu,7,6,1,am,12922,Remia,12,1,15,tb,31789,Remia
+,Jeleto,0,8,11,centaur,8860,Monta,6,3,21,faceless,8674,Monta
+,Winner: ,Dire,,,,,,,,,,,
+47,Yoshioka,3,4,16,sd,29821,dream,21,5,7,ursa,30538,Yoshioka
+,Jeleto,11,11,14,dk,21619,Remia,6,4,22,pango,46985,Jeleto
+,Lostwhale,3,13,22,ogre,13013,Paper,5,12,17,wd,19163,Lostwhale
+,Nixnala,11,14,15,lina,29086,pain peko,8,11,23,aa,42817,Nixnala
+,Bsu,13,3,13,weaver,50300,Monta,3,9,28,ds,27237,Bsu
+,Winner: ,Radiant,,,,,,,,,,,
+48,dream,4,3,20,rubick,15852,Yoshioka,4,5,6,invoker,29309,dream
+,Monta,5,2,17,brew,23295,Lester,1,3,4,underlord,9752,Monta
+,nanoir,4,4,10,lich,9594,Nixnala,2,13,2,lina,12217,nanoir
+,Jeleto,2,4,16,dk,15122,Remia,5,4,6,axe,33764,Jeleto
+,Bsu,19,0,7,am,46825,pain peko,1,9,6,ww,7294,Bsu
+,Winner: ,Radiant,,,,,,,,,,,
+49,pain peko,7,3,14,hoodwink,15206,Yoshioka,4,5,1,magnus,15079,pain peko
+,Monta,3,2,15,doom,11905,dream,4,5,5,spectre,11153,Monta
+,Jeleto,3,3,11,centaur,8877,Nixnala,0,5,3,tide,5162,Jeleto
+,Lostwhale,5,3,17,grim,7216,nanoir,0,7,3,lich,6770,Lostwhale
+,Remia,14,0,6,jugg,22993,Paper,3,11,1,cm,9590,Remia
+,Winner: ,Radiant,,,,,,,,,,,
+50,Yoshioka,21,2,13,riki,45075,Remia,5,6,10,medusa,26555,Yoshioka
+,Lostwhale,1,6,21,ogre,12422,pain peko,4,10,13,jakiro,20005,Lostwhale
+,dream,7,7,15,timber,17835,Nixnala,4,11,9,mars,18844,dream
+,nanoir,6,5,20,cm,13458,Monta,5,7,8,blood,22019,nanoir
+,tpham,11,4,12,slark,22827,Paper,5,12,10,wd,11558,tpham
+,Winner: ,Radiant,,,,,,,,,,,
+51,Yoshioka,12,3,10,qop,32155,Monta,1,6,10,mars,13349,Yoshioka
+,Bsu,11,1,12,pa,32782,Remia,4,5,7,morph,17698,Bsu
+,Paper,2,6,10,cm,11358,nanoir,6,5,13,lich,14257,Paper
+,Nixnala,3,9,13,magnus,8698,LISA,10,27,7,jugg,16054,Nixnala
+,Miyuki,4,5,16,wr,10676,pain peko,2,9,6,willow,8530,Miyuki
+,Winner: ,Radiant,,,,,,,,,,,
+52,Miyuki,13,2,19,wr,41049,Yoshioka,13,6,8,blood,30544,Miyuki
+,pain peko,5,10,19,pudge,19868,Monta,10,11,13,timber,50265,pain peko
+,Remia,12,5,23,bat,47222,Paper,1,8,12,cm,11839,Remia
+,Happynut,10,8,9,ursa,20944,nanoir,3,10,18,lich,16092,Happynut
+,Lostwhale,4,6,28,aa,22125,Nixnala,4,10,13,mk,30892,Lostwhale
+,Winner: ,Radiant,,,,,,,,,,,
+53,Yoshioka,10,8,14,ember,46824,Nixnala,12,10,30,centaur,38369,Nixnala
+,Bsu,13,8,14,drow,64014,Remia,19,5,17,axe,55265,Remia
+,nanoir,4,11,15,cm,22351,Monta,5,4,30,puck,38285,Monta
+,Miyuki,4,12,20,jakiro,31699,pain peko,8,8,26,grim,19017,pain peko
+,Happynut,2,12,18,bb,19512,Paper,7,7,24,lina,28125,Paper
+,Winner: ,Dire,,,,,,,,,,,
+54,Yoshioka,9,1,9,magnus,20600,Remia,2,5,3,medusa,9152,Yoshioka
+,Miyuki,5,2,18,wr,12341,nanoir,0,8,5,lich,10552,Miyuki
+,Paper,6,4,7,cm,12398,Happynut,3,9,1,slardar,8203,Paper
+,Bsu,10,1,9,blood,16162,Monta,2,7,3,ds,19805,Bsu
+,Lostwhale,4,2,16,centaur,10340,pain peko,3,6,4,hoodwink,14973,Lostwhale
+,Winner: ,Radiant,,,,,,,,,,,
+55,Happynut,2,8,20,centaur,9303,Yoshioka,5,6,5,timber,20566,Happynut
+,pain peko,10,7,19,hoodwink,18572,Miyuki,3,10,11,viper,19911,pain peko
+,Monta,11,3,23,sven,27556,nanoir,2,12,11,cm,11405,Monta
+,Bsu,16,3,12,silencer,44770,Remia,7,4,8,axe,22234,Bsu
+,Lostwhale,3,4,22,kka,9585,Paper,6,10,7,wd,15762,Lostwhale
+,Winner: ,Radiant,,,,,,,,,,,
+56,Yoshioka,23,8,12,axe,85833,Bsu,14,5,13,viper,58687,Yoshioka
+,Paper,4,9,11,lina,22301,Happynut,5,14,10,weaver,23916,Paper
+,geese,7,14,24,grim,35200,Miyuki,7,8,15,ogre,31853,geese
+,Monta,6,6,16,wr,37003,Nixnala,14,10,19,centaur,83520,Monta
+,Jeleto,6,8,14,dk,34910,pain peko,5,9,25,hoodwink,23584,Jeleto
+,Winner: ,Radiant,,,,,,,,,,,
+57,Monta,4,6,29,doom,20421,Yoshioka,6,6,13,timber,40409,Monta
+,Jeleto,7,14,22,underlord,25408,Nixnala,6,12,16,viper,33448,Jeleto
+,Miyuki,7,7,19,aa,18747,pain peko,7,17,20,grim,19861,Miyuki
+,geese,9,15,26,mirana,20262,Paper,8,11,11,wd,18741,geese
+,Remia,25,3,18,faceless,63754,Bsu,18,7,15,riki,54576,Remia
+,Winner: ,Radiant,,,,,,,,,,,
+58,nanoir,2,6,4,lich,10328,Bsu,12,0,7,pa,49641,Bsu
+,Remia,5,3,6,ursa,12080,Monta,5,1,10,brew,16630,Monta
+,Yoshioka,4,4,2,sf,9925,pain peko,2,6,12,grim,6750,pain peko
+,Nixnala,1,4,8,centaur,11391,LISA,3,4,10,doom,9479,LISA
+,Miyuki,4,6,8,oracle,7391,Paper,1,5,9,lion,6592,Paper
+,Winner: ,Dire,,,,,,,,,,,
+59,Yoshioka,11,2,26,zeus,101649,Lostwhale,0,13,15,tide,14819,Yoshioka
+,Nixnala,6,13,21,underlord,31725,geese,12,18,16,viper,38214,Nixnala
+,dream,21,4,12,jugg,41890,Bsu,16,4,8,wr,54781,dream
+,Remia,5,13,27,pudge,27133,tpham,8,6,15,slark,33480,Remia
+,pain peko,8,7,16,hoodwink,26351,LISA,3,12,12,lina,12765,pain peko
+,Winner: ,Radiant,,,,,,,,,,,
+60,pain peko,3,3,24,hoodwink,17286,Yoshioka,1,2,7,pango,13473,pain peko
+,Miyuki,3,3,20,lich,8963,Lostwhale,6,11,5,wd,16891,Miyuki
+,Remia,12,3,14,luna,32237,dream,4,9,2,timber,21674,Remia
+,Nixnala,11,6,13,axe,17035,geese,1,11,10,grim,10460,Nixnala
+,Bsu,10,2,18,invoker,25750,tpham,4,6,6,sven,11303,Bsu
+,Winner: ,Radiant,,,,,,,,,,,
+61,tpham,6,0,10,razor,17661,Yoshioka,1,2,5,puck,8314,tpham
+,dream,9,1,6,tb,16714,pain peko,2,6,9,naix,4824,dream
+,Remia,5,5,15,pudge,12080,Miyuki,5,8,3,shaman,13345,Remia
+,Nixnala,3,6,20,centaur,19179,Lostwhale,2,8,3,tide,10228,Nixnala
+,Paper,7,4,14,aa,12698,Bsu,6,6,4,weaver,23450,Paper
+,Winner: ,Radiant,,,,,,,,,,,
+62,Bsu,6,6,6,doom,28611,tpham,8,5,18,mk,44032,tpham
+,dream,4,7,8,spectre,36330,Nixnala,5,2,20,tide,20780,Nixnala
+,Paper,1,11,9,cm,13085,Remia,3,4,19,rubick,17343,Remia
+,Polar,0,7,9,underlord,36658,Miyuki,5,2,10,lina,15505,Miyuki
+,pain peko,3,4,7,warlock,13026,Yoshioka,13,2,12,viper,43134,Yoshioka
+,Winner: ,Dire,,,,,,,,,,,
+63,pain peko,4,9,7,phoenix,15129,Bsu,10,1,10,sniper,41527,Bsu
+,dream,2,7,12,mars,11580,Polar,4,3,14,underlord,27456,Polar
+,Remia,4,4,3,axe,14156,Monta,1,7,18,aa,10915,Monta
+,tpham,3,7,3,troll,21150,Yoshioka,13,2,12,jugg,30619,Yoshioka
+,Paper,0,10,5,jakiro,9487,Miyuki,8,2,13,wr,16265,Miyuki
+,Winner: ,Dire,,,,,,,,,,,
+64,Bsu,15,1,5,sven,32047,Yoshioka,1,2,10,tinker,40530,Bsu
+,Monta,3,1,12,doom,8336,dream,8,4,8,pa,25114,Monta
+,geese,8,6,13,grim,18544,Lester,2,9,5,tide,5557,geese
+,Nixnala,1,12,9,centaur,11451,tpham,6,5,7,lina,14288,Nixnala
+,Miyuki,4,6,8,rubick,10450,Remia,8,12,13,aa,17611,Miyuki
+,Winner: ,Radiant,,,,,,,,,,,
+65,geese,7,13,24,mirana,16813,Yoshioka,18,5,11,riki,51983,geese
+,dream,22,6,9,pa,52746,Bsu,15,4,16,wr,71081,dream
+,Remia,16,6,15,bb,60240,Monta,2,12,20,tide,19122,Remia
+,tpham,5,4,36,hoodwink,32761,Nixnala,3,19,16,lina,21647,tpham
+,Lester,5,11,19,mars,25124,Lostwhale,1,16,17,shaman,16584,Lester
+,Winner: ,Radiant,,,,,,,,,,,
+66,dream,7,5,4,mk,21151,Yoshioka,7,1,16,invoker,27316,Yoshioka
+,Monta,8,6,5,brew,12213,Nixnala,6,5,7,centaur,21623,Nixnala
+,Lostwhale,0,8,15,ogre,13929,geese,9,9,20,shaman,18308,geese
+,Bsu,1,7,3,arc,13699,Remia,8,2,8,tb,32916,Remia
+,pain peko,3,9,11,mirana,13554,tpham,5,3,20,hoodwink,25857,tpham
+,Winner: ,Dire,,,,,,,,,,,
+67,Remia,9,6,13,naix,32472,tpham,11,3,13,rubick,13767,tpham
+,Lostwhale,7,8,15,aa,29651,Bsu,12,5,11,drow,43604,Bsu
+,pain peko,5,14,15,grim,17387,Nixnala,3,10,16,centaur,86979,Nixnala
+,Yoshioka,9,5,19,bb,36786,Monta,8,6,21,brew,52177,Monta
+,dream,6,7,22,doom,20485,geese,6,12,24,lich,35959,geese
+,Winner: ,Dire,,,,,,,,,,,
+68,Yoshioka,5,1,30,mirana,37068,Miyuki,5,14,8,grim,11547,Yoshioka
+,pain peko,5,5,31,jakiro,18802,dream,3,7,6,medusa,18075,pain peko
+,LISA,9,4,30,sk,21157,Remia,6,8,6,zeus,57130,LISA
+,Paper,8,3,26,wd,12240,Nixnala,9,13,1,underlord,22936,Paper
+,Bsu,30,6,8,ursa,50086,Lostwhale,2,16,8,lich,12032,Bsu
+,Winner: ,Radiant,,,,,,,,,,,
+69,pain peko,9,2,14,oracle,9861,Remia,1,5,6,spectre,13177,pain peko
+,Nixnala,1,5,15,mars,11287,Monta,1,12,2,slardar,4939,Nixnala
+,Bsu,5,1,12,invoker,16226,Yoshioka,2,2,2,vs,13083,Bsu
+,dream,13,0,8,pa,18107,Miyuki,4,4,4,shaman,7701,dream
+,Paper,2,3,6,lina,10346,LISA,3,8,3,aa,8396,Paper
+,Winner: ,Radiant,,,,,,,,,,,
+70,Monta,5,3,16,brew,14038,Paper,5,3,16,lich,14503,Monta
+,geese,4,7,13,shaman,11592,Remia,11,4,12,hoodwink,25346,geese
+,pain peko,5,6,11,jakiro,15699,dream,5,6,15,lc,17024,pain peko
+,Bsu,10,2,8,wr,30350,Kana,3,7,6,pa,8932,Bsu
+,Nixnala,4,9,13,centaur,24879,Yoshioka,7,4,9,timber,22188,Nixnala
+,Winner: ,Radiant,,,,,,,,,,,
+71,Bsu,6,2,12,wk,17074,Yoshioka,4,4,5,doom,12513,Bsu
+,Nixnala,8,4,16,underlord,25216,Kana,4,4,5,razor,20578,Nixnala
+,pain peko,6,6,17,grim,15254,Monta,5,7,11,brew,15933,pain peko
+,dream,8,3,9,timber,19217,Remia,9,8,10,snap,22311,dream
+,Polar,5,8,16,ogre,15273,Paper,0,10,5,wd,12622,Polar
+,Winner: ,Radiant,,,,,,,,,,,
+72,Yoshioka,14,9,23,lesh,92182,Bsu,19,3,26,qop,122978,Yoshioka
+,Monta,4,13,25,centaur,23905,Kana,16,9,17,jugg,63095,Monta
+,dream,12,6,22,drow,102356,Paper,0,14,23,ogre,9376,dream
+,Remia,11,11,21,pudge,31264,pain peko,5,12,35,jakiro,80434,Remia
+,Nixnala,5,13,29,aa,48629,Monta,12,9,24,puck,48193,Nixnala
+,Winner: ,Radiant,,,,,,,,,,,
+73,Bsu,12,0,13,mirana,23618,Happynut,2,13,2,huskar,7220,Bsu
+,nanoir,6,3,19,cm,12643,Lostwhale,2,10,4,lich,9991,nanoir
+,Yoshioka,11,2,12,pango,18172,Remia,2,7,1,hoodwink,13250,Yoshioka
+,tpham,5,5,21,silencer,14027,Monta,3,6,7,bb,20423,tpham
+,Jeleto,8,3,15,dawnbreaker,16958,pain peko,4,6,5,wr,8517,Jeleto
+,Winner: ,Radiant,,,,,,,,,,,
+74,Happynut,1,11,2,rubick,8370,Bsu,12,0,13,drow,37841,Bsu
+,Jeleto,1,11,3,axe,8609,nanoir,3,4,7,ogre,6430,nanoir
+,pain peko,4,5,3,ww,10064,Yoshioka,7,1,16,lion,12590,Yoshioka
+,Monta,2,4,3,beast,21524,tpham,8,2,8,ursa,13515,tpham
+,Remia,2,2,3,pl,9609,Lostwhale,3,3,15,tide,8470,Lostwhale
+,Winner: ,Dire,,,,,,,,,,,
