@@ -211,3 +211,12 @@ export const pictureLegend = {
 export const nameLegend = {
   'Bsu': "BeeSu",
 }
+
+export const portraitLegend = {
+  'LISA': "/dota-inhouse-stats/angus.png",
+  'nanoir': "/dota-inhouse-stats/dixon.png",
+  'Jeleto': "/dota-inhouse-stats/saif.png",
+  'Nixnala': "/dota-inhouse-stats/alan.png",
+  'geese': "/dota-inhouse-stats/holden.png",
+  'Coolgav': "/dota-inhouse-stats/gavin.png"
+}

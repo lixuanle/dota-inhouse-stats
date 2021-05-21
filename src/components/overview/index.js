@@ -28,7 +28,7 @@ const MatchOverview = ({ matchDetails }) => {
             </div>
           ))}
         </div>
-        <DownArrow src="/arrow-down.png" isOpen={isOpen}/>
+        <DownArrow src="/dota-inhouse-stats/arrow-down.png" isOpen={isOpen}/>
       </InformationContainer>
       {isOpen && 
         <MatchDetails 

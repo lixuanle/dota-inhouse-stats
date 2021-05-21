@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 import styled from "styled-components";
 
 import CustomTooltip from "../../components/custom-tooltip";
-import { heroLegend, nameLegend, pictureLegend } from '../../util/legends';
+import { heroLegend, nameLegend, pictureLegend, portraitLegend } from '../../util/legends';
 
 const UserPage = ({ individualStats }) => {
   const { id } = useParams();
@@ -107,9 +107,14 @@ const UserPage = ({ individualStats }) => {
 
     return (
       <>
-        <MainPageHeader>Inhouse Stats For Animals</MainPageHeader>
+        <Link to="/dota-inhouse-stats" style={{ textDecoration: "none" }}>
+          <MainPageHeader>Inhouse Stats For Animals</MainPageHeader>
+        </Link>
           <UserPageContainer>
           <MainPageSubheader>User stats for: { nameLegend[id] ? nameLegend[id] : id }</MainPageSubheader>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <PlayerPortrait src={portraitLegend[id]} />
+          </div>
           <UserStatistics>
             <div>
               <UserInfoText>Winrate</UserInfoText>
@@ -232,10 +237,13 @@ const UserPageContainer = styled.div`
 `
 
 const MainPageSubheader = styled.h2`
-  margin: 50px auto;
   text-align: center;
   border: 1px solid #eaeae1;
   padding: 50px;
+`
+
+const PlayerPortrait = styled.img`
+  width: 30%;
 `
 
 const UserStatistics = styled.div`

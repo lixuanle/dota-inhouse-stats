@@ -55,7 +55,7 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory }) => {
       <MainContainer> 
         <MainPageSubheader>🗣️: {bronsonQuote}</MainPageSubheader>
         <form onSubmit={handleSubmit}>
-          <SearchBar type="text" value={searchText} onChange={handleChange} placeholder="Search by name, or hero..."/>
+          <SearchBar type="text" value={searchText} onChange={handleChange} placeholder="Search by name.."/>
         </form>
         {matchHistory?.map((game, index) => (
           <MatchOverview 
