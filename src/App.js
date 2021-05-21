@@ -32,7 +32,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/dota-inhouse-stats/">
           <MainPage 
             matchHistory={matchHistory}
             initialData={initialData}
