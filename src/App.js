@@ -11,8 +11,8 @@ const App = () => {
 
   useEffect(() => {
     const getCSV = async () => {
-      const { listOfGames, playerStats } = await readCSV();
-      console.log(listOfGames);
+      const { listOfGames, playerStats, heroPicks, sideWins } = await readCSV();
+      console.log(playerStats);
       setCsvData(listOfGames);
     }
     getCSV();
