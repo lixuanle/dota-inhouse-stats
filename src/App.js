@@ -1,44 +1,52 @@
 import { useEffect, useState } from "react"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-import logo from './logo.svg';
-import './App.css';
-
+import MainPage from "./pages/main-page";
+import UserPage from "./pages/user";
 import readCSV from "./util/parser"
 
 const App = () => {
 
-  const [csvData, setCsvData] = useState([]);
+  const [ initialData, setInitialData ] = useState([]);
+  const [ matchHistory, setMatchHistory ] = useState([]);
+  const [ individualStats, setIndividualStats ] = useState()
+  const [ , setHeroData ] = useState();
+  // const [ winData, setWinData ] = useState()
 
   useEffect(() => {
     const getCSV = async () => {
-      const { listOfGames, playerStats, heroPicks, sideWins } = await readCSV();
-      console.log(playerStats);
-      setCsvData(listOfGames);
+      const { listOfGames, playerStats, heroPicks } = await readCSV();
+      setMatchHistory(listOfGames);
+      setInitialData(listOfGames);
+      setIndividualStats(playerStats);
+      setHeroData(heroPicks);
+      // setWinData(sideWins);
     }
     getCSV();
   }, [])
 
-  useEffect(() => {
-  
-  }, [csvData])
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <MainPage 
+            matchHistory={matchHistory}
+            initialData={initialData}
+            setMatchHistory={setMatchHistory}
+          />
+        </Route>
+        <Route exact path={`/user/:id`}>
+          <UserPage 
+            individualStats={individualStats}
+            initialData={initialData}
+          />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

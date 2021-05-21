@@ -7,26 +7,14 @@ const readCSV = async () => {
   const { data: csvData } = readString(data);
   if (csvData.length > 0) {
 
-    let listOfGames = {};
-    let gameNum = 0;
+    let listOfGames = [];
+    let gameToAdd = [];
     let playerStats = {};
     let heroPicks = {};
     let sideWins = { radiant: 0, dire: 0 };
-    let radiantPlayers = [];
-    let direPlayers = [];
     let counter = 0;
 
     for (const row of csvData.slice(1)) {
-
-      // Uses column 1 of the CSV to keep track of the game number.
-      if (row[0].length > 0) {
-        gameNum = row[0];
-        listOfGames[gameNum] = {
-          "radiant": {},
-          "dire": {},
-          "winner": ""
-        };
-      }
 
       if (row[1] !== "Winner: ") {
 
@@ -34,14 +22,33 @@ const readCSV = async () => {
         const radiantPlayer = row[1];
         const direPlayer = row[7];
 
-        radiantPlayers.push(radiantPlayer)
-        direPlayers.push(direPlayer);
+        // 2 blocks of code to keep a history of each game, the players in it, the heroes played, and the stats.
+        gameToAdd.push({
+          username: radiantPlayer,
+          side: "Radiant",
+          kills: row[2],
+          deaths: row[3],
+          assists: row[4],
+          hero: row[5],
+          damage: row[6],
+          winner: row[13] === radiantPlayer ? true : false
+        });
+
+        gameToAdd.push({
+          username: direPlayer,
+          side: "Dire",
+          kills: row[8],
+          deaths: row[9],
+          assists: row[10],
+          hero: row[11],
+          damage: row[12],
+          winner: row[13] === direPlayer ? true : false
+        });
 
         if (counter === 4) {
-          listOfGames[gameNum].radiantPlayers = [...radiantPlayers];
-          listOfGames[gameNum].direPlayers = [...direPlayers];
-          radiantPlayers = [];
-          direPlayers = [];
+
+        listOfGames.push(gameToAdd);
+        gameToAdd = [];
           counter = -1;
         }
 
@@ -79,45 +86,52 @@ const readCSV = async () => {
         // row[5] = Radiant hero played.
         // row[11] = Dire hero played.
         // row[13] = Winning player.
-        if (!playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]]) {
-          playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]] = {
+        if (!playerStats[radiantPlayer].heroesPlayed[row[5]]) {
+          playerStats[radiantPlayer].heroesPlayed[row[5]] = {
             played: 1,
             wins: 0,
             losses: 0,
-          }
-          if (row[13] === radiantPlayer) {
-            playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]]["wins"] += 1;
-          } else {
-            playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]]["losses"] += 1;
+            kills: 0,
+            deaths: 0,
+            assists: 0,
           }
         } else {
-          playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]]["played"] += 1
-          if (row[13] === radiantPlayer) {
-            playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]]["wins"] += 1;
-          } else {
-            playerStats[radiantPlayer].heroesPlayed[heroLegend[row[5]]]["losses"] += 1;
-          }
+          playerStats[radiantPlayer].heroesPlayed[row[5]]["played"] += 1
         }
+
+        playerStats[radiantPlayer].heroesPlayed[row[5]]["kills"] += parseInt(row[2]);
+        playerStats[radiantPlayer].heroesPlayed[row[5]]["deaths"] += parseInt(row[3]);
+        playerStats[radiantPlayer].heroesPlayed[row[5]]["assists"] += parseInt(row[4]);
+
+        if (row[13] === radiantPlayer) {
+          playerStats[radiantPlayer].heroesPlayed[row[5]]["wins"] += 1;
+        } else {
+          playerStats[radiantPlayer].heroesPlayed[row[5]]["losses"] += 1;
+        }
+      
         
         // Same block as above but to track Dire side.
-        if (!playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]]) {
-          playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]] = {
+        if (!playerStats[direPlayer].heroesPlayed[row[11]]) {
+          playerStats[direPlayer].heroesPlayed[row[11]] = {
             played: 1,
             wins: 0,
-            losses: 0
-          }
-          if (row[13] === direPlayer) {
-            playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]]["wins"] += 1;
-          } else {
-            playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]]["losses"] += 1;
+            losses: 0,
+            kills: 0,
+            deaths: 0,
+            assists: 0,
           }
         } else {
-          playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]]["played"] += 1
-          if (row[13] === direPlayer) {
-            playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]]["wins"] += 1;
-          } else {
-            playerStats[direPlayer].heroesPlayed[heroLegend[row[11]]]["losses"] += 1;
-          }
+          playerStats[direPlayer].heroesPlayed[row[11]]["played"] += 1
+        }
+
+        playerStats[direPlayer].heroesPlayed[row[11]]["kills"] += parseInt(row[8]);
+        playerStats[direPlayer].heroesPlayed[row[11]]["deaths"] += parseInt(row[9]);
+        playerStats[direPlayer].heroesPlayed[row[11]]["assists"] += parseInt(row[10]);
+
+        if (row[13] === direPlayer) {
+          playerStats[direPlayer].heroesPlayed[row[11]]["wins"] += 1;
+        } else {
+          playerStats[direPlayer].heroesPlayed[row[11]]["losses"] += 1;
         }
         
         // Block of code to check if the hero exists in that total picks object and adds it if it doesn't exist. If it exists, it updates accordingly.
@@ -130,18 +144,14 @@ const readCSV = async () => {
             wins: 0,
             losses: 0
           }
-          if (row[13] === radiantPlayer) {
-            heroPicks[heroLegend[row[5]]]["wins"] += 1;
-          } else {
-            heroPicks[heroLegend[row[5]]]["losses"] += 1;
-          }
         } else {
           heroPicks[heroLegend[row[5]]]["played"] += 1
-          if (row[13] === radiantPlayer) {
-            heroPicks[heroLegend[row[5]]]["wins"] += 1;
-          } else {
-            heroPicks[heroLegend[row[5]]]["losses"] += 1;
-          }
+        }
+
+        if (row[13] === radiantPlayer) {
+          heroPicks[heroLegend[row[5]]]["wins"] += 1;
+        } else {
+          heroPicks[heroLegend[row[5]]]["losses"] += 1;
         }
 
         // Same block of code as above but to keep track of Dire side.
@@ -151,18 +161,14 @@ const readCSV = async () => {
             wins: 0,
             losses: 0,
           }
-          if (row[13] === direPlayer) {
-            heroPicks[heroLegend[row[11]]]["wins"] += 1;
-          } else {
-            heroPicks[heroLegend[row[11]]]["losses"] += 1;
-          }
         } else {
           heroPicks[heroLegend[row[11]]]["played"] += 1;
-          if (row[13] === direPlayer) {
-            heroPicks[heroLegend[row[11]]]["wins"] += 1;
-          } else {
-            heroPicks[heroLegend[row[11]]]["losses"] += 1;
-          }
+        }
+
+        if (row[13] === direPlayer) {
+          heroPicks[heroLegend[row[11]]]["wins"] += 1;
+        } else {
+          heroPicks[heroLegend[row[11]]]["losses"] += 1;
         }
 
         // 2 blocks of code to update the running sum of all the corresponding stats per player.
@@ -180,131 +186,44 @@ const readCSV = async () => {
         playerStats[direPlayer].wins += (row[13] === direPlayer ? 1 : 0);
         playerStats[direPlayer].losses += (row[13] !== direPlayer ? 1 : 0);
 
-        // 2 blocks of code to keep a history of each game, the players in it, the heroes played, and the stats.
-        listOfGames[gameNum].radiant[radiantPlayer] = {
-          kills: row[2],
-          deaths: row[3],
-          assists: row[4],
-          hero: row[5],
-          damage: row[6],
-          winner: row[13] === radiantPlayer ? true : false
-        };
-
-        listOfGames[gameNum].dire[direPlayer] = {
-          kills: row[8],
-          deaths: row[9],
-          assists: row[10],
-          hero: row[11],
-          damage: row[12],
-          winner: row[13] === direPlayer ? true : false
-        };
-
       } else {
         // If the csv line is Winner: Dire/Radiant, this block will update the wins for that side.
         if (row[2] === 'Dire') {
-          listOfGames[gameNum].winner = "Dire"
           sideWins.dire += 1
         } else {
           sideWins.radiant += 1
-          listOfGames[gameNum].winner = "Radiant"
         }
       }
     }
 
-    // FAT code block to parse the peer data. This probably does not scale at ALL, but for what we have now its that bad.
-    for (const game in listOfGames) {
-      for (const radiantPlayer of listOfGames[game].radiantPlayers) {
-        for (const radiantPlayer2 of listOfGames[game].radiantPlayers) {
-          if (radiantPlayer !== radiantPlayer2) {
-            if (!playerStats[radiantPlayer].peers[radiantPlayer2]) {
-              playerStats[radiantPlayer].peers[radiantPlayer2] = {
+    // This probably does not scale at ALL, but for what we have now its that bad.
+    // The ideal case here is that we switch to the league API, but on the other hand we probably will never get more than 1000 games and even then performance wouldn't tank. Probably.
+    for (const game of listOfGames) {
+      // Cross references the player with the other players in the match, and checks to see who won that match.
+      for (const player of game) {
+        const { username, side, winner } = player;
+        for (const otherPlayer of game) {
+          const { username: otherUsername, side: otherSide } = otherPlayer;
+          if (username !== otherUsername) {
+            if (!playerStats[username].peers[otherUsername]) {
+              playerStats[username].peers[otherUsername] = {
                 played: 1,
                 wonWith: 0,
                 lostWith: 0,
                 wonAgainst: 0,
                 lostAgainst: 0,
               }
-              playerStats[radiantPlayer].peers[radiantPlayer2].played += 1
-              if (listOfGames[game].winner === "Radiant") {
-                playerStats[radiantPlayer].peers[radiantPlayer2].wonWith += 1
-              } else {
-                playerStats[radiantPlayer].peers[radiantPlayer2].lostWith += 1
-              }
             } else {
-              playerStats[radiantPlayer].peers[radiantPlayer2].played += 1
-              if (listOfGames[game].winner === "Radiant") {
-                playerStats[radiantPlayer].peers[radiantPlayer2].wonWith += 1
-              } else {
-                playerStats[radiantPlayer].peers[radiantPlayer2].lostWith += 1
-              }
+              playerStats[username].peers[otherUsername].played += 1;
             }
-          }
-        }
-        for (const againstDirePlayer of listOfGames[game].direPlayers) {
-          if (!playerStats[radiantPlayer].peers[againstDirePlayer]) {
-            playerStats[radiantPlayer].peers[againstDirePlayer] = {
-              played: 1,
-              wonWith: 0,
-              lostWith: 0,
-              wonAgainst: 0,
-              lostAgainst: 0,
-            }
-            if (listOfGames[game].winner === "Radiant") {
-              playerStats[radiantPlayer].peers[againstDirePlayer].wonAgainst += 1
+            if (side === otherSide && winner) {
+              playerStats[username].peers[otherUsername].wonWith += 1;
+            } else if (side === otherSide && !winner) {
+              playerStats[username].peers[otherUsername].lostWith += 1;
+            } else if (side !== otherSide && winner) {
+              playerStats[username].peers[otherUsername].wonAgainst += 1;
             } else {
-              playerStats[radiantPlayer].peers[againstDirePlayer].lostAgainst += 1
-            }
-          } else {
-            playerStats[radiantPlayer].peers[againstDirePlayer].played += 1
-            if (listOfGames[game].winner === "Radiant") {
-              playerStats[radiantPlayer].peers[againstDirePlayer].wonAgainst += 1
-            } else {
-              playerStats[radiantPlayer].peers[againstDirePlayer].lostAgainst += 1
-            }
-          }
-        }
-      }
-      for (const direPlayer of listOfGames[game].direPlayers) {
-        for (const direPlayer2 of listOfGames[game].direPlayers) {
-          if (direPlayer !== direPlayer2) {
-            if (!playerStats[direPlayer].peers[direPlayer2]) {
-              playerStats[direPlayer].peers[direPlayer2] = {
-                played: 1,
-                wonWith: 0,
-                lostWith: 0,
-                wonAgainst: 0,
-                lostAgainst: 0,
-              }
-              if (listOfGames[game].winner === "Dire") {
-                playerStats[direPlayer].peers[direPlayer2].wonWith += 1
-              } else {
-                playerStats[direPlayer].peers[direPlayer2].lostWith += 1
-              }
-            } else {
-              playerStats[direPlayer].peers[direPlayer2].played += 1
-              if (listOfGames[game].winner === "Dire") {
-                playerStats[direPlayer].peers[direPlayer2].wonWith += 1
-              } else {
-                playerStats[direPlayer].peers[direPlayer2].lostWith += 1
-              }
-            }
-          }
-        }
-        for (const againstRadiantPlayer of listOfGames[game].radiantPlayers) {
-          if (!playerStats[direPlayer].peers[againstRadiantPlayer]) {
-            playerStats[direPlayer].peers[againstRadiantPlayer] = {
-              played: 1,
-              wonWith: 0,
-              lostWith: 0,
-              wonAgainst: 0,
-              lostAgainst: 0,
-            }
-          } else {
-            playerStats[direPlayer].peers[againstRadiantPlayer].played += 1
-            if (listOfGames[game].winner === "Dire") {
-              playerStats[direPlayer].peers[againstRadiantPlayer].wonAgainst += 1
-            } else {
-              playerStats[direPlayer].peers[againstRadiantPlayer].lostAgainst += 1
+              playerStats[username].peers[otherUsername].lostAgainst += 1;
             }
           }
         }
