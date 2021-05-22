@@ -37,6 +37,7 @@ const App = () => {
             matchHistory={matchHistory}
             initialData={initialData}
             setMatchHistory={setMatchHistory}
+            individualStats={individualStats}
           />
         </Route>
         <Route exact path={`/user/:id`}>

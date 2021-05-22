@@ -12,6 +12,8 @@ const UserPage = ({ individualStats }) => {
   const [sortedPeerData, setSortedPeerData] = useState()
   const [sortCategory, setSortCategory] = useState("")
 
+  console.log(individualStats)
+
   useEffect(() => {
     if (individualStats) {
       const { heroesPlayed, peers } = individualStats[id];
@@ -36,8 +38,8 @@ const UserPage = ({ individualStats }) => {
 
       for (const peerName in peers) {
         peerData.push({
-          peerName: peerName,
-          ...peers[peerName]
+          peerName: peerName.toLowerCase(),
+          ...peers[peerName.toLowerCase()]
         })
       }
       peerData.sort((a,b) => {

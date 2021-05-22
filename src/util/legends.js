@@ -213,16 +213,19 @@ export const nameLegend = {
 }
 
 export const portraitLegend = {
-  'LISA': "/dota-inhouse-stats/angus.png",
+  'lisa': "/dota-inhouse-stats/angus.png",
   'nanoir': "/dota-inhouse-stats/dixon.png",
-  'Jeleto': "/dota-inhouse-stats/saif.png",
-  'Nixnala': "/dota-inhouse-stats/alan.png",
+  'jeleto': "/dota-inhouse-stats/saif.png",
+  'nixnala': "/dota-inhouse-stats/alan.png",
   'geese': "/dota-inhouse-stats/holden.png",
-  'Coolgav': "/dota-inhouse-stats/gavin.png",
+  'coolgave': "/dota-inhouse-stats/gavin.png",
   'pain peko': "/dota-inhouse-stats/denzel.png",
-  'Justin': "/dota-inhouse-stats/justin.png",
-  'Lester': "/dota-inhouse-stats/lester.png",
-  'Monta': "/dota-inhouse-stats/isaac.png",
+  'justin': "/dota-inhouse-stats/justin.png",
+  'lester': "/dota-inhouse-stats/lester.png",
+  'monta': "/dota-inhouse-stats/isaac.png",
   'dream': "/dota-inhouse-stats/alex.png",
-  'Bsu': "/dota-inhouse-stats/bronson.png"
+  'bsu': "/dota-inhouse-stats/bronson.png",
+  'chesticlez': "/dota-inhouse-stats/cheston.png",
+  'yoshioka': "/dota-inhouse-stats/anthony.png",
+  'remia': "/dota-inhouse-stats/huy.png",
 }

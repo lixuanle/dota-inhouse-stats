@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components"
 
 import MatchOverview from "../../components/overview"
@@ -21,9 +22,12 @@ const bronsonTicks = [
   "Not the sannin man",
 ]
 
-const MainPage = ({ initialData, matchHistory, setMatchHistory }) => {
+const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats }) => {
   const [ searchText, setSearchText ] = useState("");
   const [ bronsonQuote, setBronsonQuote ] = useState("");
+  console.log(initialData)
+
+  let history = useHistory();
 
   useEffect(() => {
     setBronsonQuote(bronsonTicks[Math.floor(Math.random() * bronsonTicks.length + 1)]);
@@ -31,14 +35,10 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory }) => {
 
   useEffect(() => {
     setMatchHistory(initialData);
-  }, [initialData])
+  }, [initialData, setMatchHistory])
 
   const handleChange = e => {
     setSearchText(e.target.value);
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault();
     let filteredResult = [];
     if (searchText.length > 1) {
       for (const game of initialData) {
@@ -49,6 +49,15 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory }) => {
         }
       }
       setMatchHistory(filteredResult)
+    } else {
+      setMatchHistory(initialData);
+    }
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (individualStats[searchText]) {
+      history.push(`/user/${searchText}`)
     }
   }
 

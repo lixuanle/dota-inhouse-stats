@@ -19,8 +19,8 @@ const readCSV = async () => {
       if (row[1] !== "Winner: ") {
 
         // In hindsight I could probably destruct the array and make one of these variables for each item instead of doing row[i] all the time but future me can deal with that.
-        const radiantPlayer = row[1];
-        const direPlayer = row[7];
+        const radiantPlayer = row[1].toLowerCase();
+        const direPlayer = row[7].toLowerCase();
 
         // 2 blocks of code to keep a history of each game, the players in it, the heroes played, and the stats.
         gameToAdd.push({
@@ -128,7 +128,7 @@ const readCSV = async () => {
         playerStats[direPlayer].heroesPlayed[row[11]]["deaths"] += parseInt(row[9]);
         playerStats[direPlayer].heroesPlayed[row[11]]["assists"] += parseInt(row[10]);
 
-        if (row[13] === direPlayer) {
+        if (row[13].toLowerCase() === direPlayer) {
           playerStats[direPlayer].heroesPlayed[row[11]]["wins"] += 1;
         } else {
           playerStats[direPlayer].heroesPlayed[row[11]]["losses"] += 1;
@@ -148,7 +148,7 @@ const readCSV = async () => {
           heroPicks[heroLegend[row[5]]]["played"] += 1
         }
 
-        if (row[13] === radiantPlayer) {
+        if (row[13].toLowerCase() === radiantPlayer) {
           heroPicks[heroLegend[row[5]]]["wins"] += 1;
         } else {
           heroPicks[heroLegend[row[5]]]["losses"] += 1;
@@ -165,7 +165,7 @@ const readCSV = async () => {
           heroPicks[heroLegend[row[11]]]["played"] += 1;
         }
 
-        if (row[13] === direPlayer) {
+        if (row[13].toLowerCase() === direPlayer) {
           heroPicks[heroLegend[row[11]]]["wins"] += 1;
         } else {
           heroPicks[heroLegend[row[11]]]["losses"] += 1;
