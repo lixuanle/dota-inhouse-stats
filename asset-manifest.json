@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dota-inhouse-stats/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/dota-inhouse-stats/static/js/main.d89aa101.chunk.js",
-    "main.js.map": "/dota-inhouse-stats/static/js/main.d89aa101.chunk.js.map",
+    "main.js": "/dota-inhouse-stats/static/js/main.c524c08f.chunk.js",
+    "main.js.map": "/dota-inhouse-stats/static/js/main.c524c08f.chunk.js.map",
     "runtime-main.js": "/dota-inhouse-stats/static/js/runtime-main.29db2212.js",
     "runtime-main.js.map": "/dota-inhouse-stats/static/js/runtime-main.29db2212.js.map",
     "static/js/2.6895dbfa.chunk.js": "/dota-inhouse-stats/static/js/2.6895dbfa.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.29db2212.js",
     "static/js/2.6895dbfa.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.d89aa101.chunk.js"
+    "static/js/main.c524c08f.chunk.js"
   ]
 }
