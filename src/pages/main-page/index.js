@@ -27,8 +27,11 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory }) => {
 
   useEffect(() => {
     setBronsonQuote(bronsonTicks[Math.floor(Math.random() * bronsonTicks.length + 1)]);
+  }, [setMatchHistory])
+
+  useEffect(() => {
     setMatchHistory(initialData);
-  }, [initialData, setMatchHistory])
+  }, [initialData])
 
   const handleChange = e => {
     setSearchText(e.target.value);

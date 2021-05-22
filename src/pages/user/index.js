@@ -107,7 +107,7 @@ const UserPage = ({ individualStats }) => {
 
     return (
       <>
-        <Link to="/dota-inhouse-stats" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <MainPageHeader>Inhouse Stats For Animals</MainPageHeader>
         </Link>
           <UserPageContainer>
