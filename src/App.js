@@ -20,8 +20,9 @@ const App = () => {
   useEffect(() => {
     const getCSV = async () => {
       const { listOfGames, playerStats, heroPicks } = await readCSV();
-      setMatchHistory(listOfGames);
-      setInitialData(listOfGames);
+      console.log(listOfGames)
+      setMatchHistory([...listOfGames].reverse());
+      setInitialData([...listOfGames].reverse());
       setIndividualStats(playerStats);
       setHeroData(heroPicks);
       // setWinData(sideWins);

@@ -12,8 +12,6 @@ const UserPage = ({ individualStats }) => {
   const [sortedPeerData, setSortedPeerData] = useState()
   const [sortCategory, setSortCategory] = useState("")
 
-  console.log(individualStats)
-
   useEffect(() => {
     if (individualStats) {
       const { heroesPlayed, peers } = individualStats[id];
@@ -59,7 +57,6 @@ const UserPage = ({ individualStats }) => {
 
   const sortArray = (category, array) => {
     const newArray = (array === "hero") ? [...sortedHeroData] : [...sortedPeerData];
-    console.log(newArray);
     // console.log(newArray);
     if (category === "gamesPlayed") {
       newArray.sort((a,b) => {

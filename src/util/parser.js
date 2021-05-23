@@ -5,6 +5,7 @@ const readCSV = async () => {
   const response = await fetch('https://raw.githubusercontent.com/lixuanle/dota-inhouse-stats/main/public/data/game-stats.csv');
   const data = await response.text();
   const { data: csvData } = readString(data);
+  console.log(csvData);
   if (csvData.length > 0) {
 
     let listOfGames = [];
@@ -25,24 +26,24 @@ const readCSV = async () => {
         // 2 blocks of code to keep a history of each game, the players in it, the heroes played, and the stats.
         gameToAdd.push({
           username: radiantPlayer,
-          side: "Radiant",
+          side: "radiant",
           kills: row[2],
           deaths: row[3],
           assists: row[4],
           hero: row[5],
           damage: row[6],
-          winner: row[13] === radiantPlayer ? true : false
+          winner: row[13].toLowerCase() === radiantPlayer ? true : false
         });
 
         gameToAdd.push({
           username: direPlayer,
-          side: "Dire",
+          side: "dire",
           kills: row[8],
           deaths: row[9],
           assists: row[10],
           hero: row[11],
           damage: row[12],
-          winner: row[13] === direPlayer ? true : false
+          winner: row[13].toLowerCase() === direPlayer ? true : false
         });
 
         if (counter === 4) {
@@ -103,7 +104,7 @@ const readCSV = async () => {
         playerStats[radiantPlayer].heroesPlayed[row[5]]["deaths"] += parseInt(row[3]);
         playerStats[radiantPlayer].heroesPlayed[row[5]]["assists"] += parseInt(row[4]);
 
-        if (row[13] === radiantPlayer) {
+        if (row[13].toLowerCase() === radiantPlayer) {
           playerStats[radiantPlayer].heroesPlayed[row[5]]["wins"] += 1;
         } else {
           playerStats[radiantPlayer].heroesPlayed[row[5]]["losses"] += 1;
@@ -176,15 +177,15 @@ const readCSV = async () => {
         playerStats[radiantPlayer].deaths += parseInt(row[3]);
         playerStats[radiantPlayer].assists += parseInt(row[4]);
         playerStats[radiantPlayer].damage += parseInt(row[6]);
-        playerStats[radiantPlayer].wins += (row[13] === radiantPlayer ? 1 : 0);
-        playerStats[radiantPlayer].losses += (row[13] !== radiantPlayer ? 1 : 0);
+        playerStats[radiantPlayer].wins += (row[13].toLowerCase() === radiantPlayer ? 1 : 0);
+        playerStats[radiantPlayer].losses += (row[13].toLowerCase() !== radiantPlayer ? 1 : 0);
 
         playerStats[direPlayer].kills += parseInt(row[8]);
         playerStats[direPlayer].deaths += parseInt(row[9]);
         playerStats[direPlayer].assists += parseInt(row[10]);
         playerStats[direPlayer].damage += parseInt(row[12]);
-        playerStats[direPlayer].wins += (row[13] === direPlayer ? 1 : 0);
-        playerStats[direPlayer].losses += (row[13] !== direPlayer ? 1 : 0);
+        playerStats[direPlayer].wins += (row[13].toLowerCase() === direPlayer ? 1 : 0);
+        playerStats[direPlayer].losses += (row[13].toLowerCase() !== direPlayer ? 1 : 0);
 
       } else {
         // If the csv line is Winner: Dire/Radiant, this block will update the wins for that side.

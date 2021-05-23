@@ -25,7 +25,6 @@ const bronsonTicks = [
 const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats }) => {
   const [ searchText, setSearchText ] = useState("");
   const [ bronsonQuote, setBronsonQuote ] = useState("");
-  console.log(initialData)
 
   let history = useHistory();
 
