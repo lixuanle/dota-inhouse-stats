@@ -103,21 +103,24 @@ const UserPage = ({ individualStats }) => {
   if (individualStats) {
     const { kills, assists, deaths, damage, wins, losses } = individualStats[id];
     const totalGames = wins + losses;
+    const userWinrate = ((wins/totalGames)*100).toFixed(2);
 
     return (
       <>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <MainPageHeader>Inhouse Stats For Animals</MainPageHeader>
-        </Link>
         <UserPageContainer>
-          <MainPageSubheader>User stats for: { nameLegend[id] ? nameLegend[id] : id }</MainPageSubheader>
+          <MainPageSubheader>
+            User stats for: { nameLegend[id] ? nameLegend[id] : id }
+            {portraitLegend[id] &&
+              <VerifiedIcon className="fas fa-check fa-xs" title="This user has been verified."></VerifiedIcon>
+            }
+          </MainPageSubheader>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <PlayerPortrait src={portraitLegend[id]} />
           </div>
           <UserStatistics>
             <div>
               <UserInfoText>Winrate</UserInfoText>
-              <UserInfoText>{((wins/totalGames)*100).toFixed(2)}%</UserInfoText>
+              <UserInfoText rateColor={userWinrate > 50}>{userWinrate}%</UserInfoText>
             </div>
             <div>
               <UserInfoText>Games Played</UserInfoText>
@@ -152,6 +155,7 @@ const UserPage = ({ individualStats }) => {
             </HeroHeader>
             <div style={{ display: "flex", flexDirection: "column" }}>
               {sortedHeroData?.map(({ heroName, played, wins, losses, kills, deaths, assists }) => {
+                const winRate = ((wins/played)*100).toFixed(2);
                 const killRate = (kills/played);
                 const deathsRate = (deaths/played);
                 const assistsRate = (assists/played);
@@ -162,7 +166,7 @@ const UserPage = ({ individualStats }) => {
                       <HeroText>{heroLegend[heroName]}</HeroText>
                     </div>
                     <HeroText>{played}</HeroText>
-                    <HeroText>{((wins/played)*100).toFixed(2)}%</HeroText>
+                    <HeroText rateColor={winRate > 50}>{winRate}%</HeroText>
                     <HeroText>{killRate.toFixed(2)}</HeroText>
                     <HeroText>{deathsRate.toFixed(2)}</HeroText>
                     <HeroText>{assistsRate.toFixed(2)}</HeroText>
@@ -178,7 +182,6 @@ const UserPage = ({ individualStats }) => {
               margin={{
                 top: 50,
                 right: 30,
-                left: 20,
                 bottom: 5,
               }}
             >
@@ -201,15 +204,35 @@ const UserPage = ({ individualStats }) => {
               <PeerInfoText onClick={() => sortArray('wonAgainst', 'peers')}>Won Against</PeerInfoText>
               <PeerInfoText onClick={() => sortArray('lostAgainst', 'peers')}>Lost Against</PeerInfoText>
             </PeerHeader>
-            {sortedPeerData?.map(({ peerName, played, wonWith, lostWith, wonAgainst, lostAgainst }, index) => {
+            {sortedPeerData?.map(({ peerName, played, wonWith, lostWith, wonAgainst, lostAgainst }) => {
+              const wonWithRate = (wonWith/(wonWith + lostWith) * 100).toFixed(2);
+              const lostWithRate = (lostWith/(wonWith + lostWith) * 100).toFixed(2);
+              const wonAgainstRate = (wonAgainst/(wonAgainst + lostAgainst) * 100).toFixed(2);
+              const lostAgainstRate = (lostAgainst/(wonAgainst + lostAgainst) * 100).toFixed(2);
               return (
                 <PeerContainer>
                   <PeerLink to={`/user/${peerName}`}>{peerName}</PeerLink>
                   <PeerText>{played}</PeerText>
-                  <PeerText>{wonWith}({!isNaN(wonWith/(wonWith + lostWith)) ? (wonWith/(wonWith + lostWith) * 100).toFixed(2) : 0 }%)</PeerText>
-                  <PeerText>{lostWith}({!isNaN(lostWith/(wonWith + lostWith)) ? (lostWith/(wonWith + lostWith) * 100).toFixed(2) : 0 }%)</PeerText>
-                  <PeerText>{wonAgainst}({!isNaN(wonAgainst/(wonAgainst + lostAgainst))? (wonAgainst/(wonAgainst + lostAgainst) * 100).toFixed(2) : 0 }%)</PeerText>
-                  <PeerText>{lostAgainst}({!isNaN(lostAgainst/(wonAgainst + lostAgainst)) ? (lostAgainst/(wonAgainst + lostAgainst) * 100).toFixed(2) : 0 }%)</PeerText>
+                  <PeerText>{wonWith}
+                    <PeerRateText rateColor={wonWithRate > 50}>
+                      ({!isNaN(wonWithRate) ? wonWithRate : 0 }%)
+                    </PeerRateText>
+                  </PeerText>
+                  <PeerText>{lostWith}
+                    <PeerRateText rateColor={lostWithRate > 50}>
+                        ({!isNaN(lostWithRate) ? lostWithRate : 0 }%)
+                    </PeerRateText>
+                  </PeerText>
+                  <PeerText>{wonAgainst}
+                    <PeerRateText rateColor={wonAgainstRate > 50}>
+                      ({!isNaN(wonAgainstRate)? wonAgainstRate : 0 }%)
+                    </PeerRateText>
+                  </PeerText>
+                  <PeerText>{lostAgainst}
+                    <PeerRateText rateColor={lostAgainstRate > 50}>
+                      ({!isNaN(lostAgainstRate) ? lostAgainstRate : 0 }%)
+                    </PeerRateText>
+                  </PeerText>
                 </PeerContainer>
               )
             })}
@@ -222,14 +245,6 @@ const UserPage = ({ individualStats }) => {
 
 export default UserPage;
 
-const MainPageHeader = styled.h1`
-  background-color: #24292e;
-  text-align: center;
-  color: white;
-  padding: 50px;
-  margin: 0;
-`
-
 const UserPageContainer = styled.div`
   max-width: 750px;
   margin: 0 auto;
@@ -240,6 +255,11 @@ const MainPageSubheader = styled.h2`
   text-align: center;
   border: 1px solid #eaeae1;
   padding: 50px;
+`
+
+const VerifiedIcon = styled.i`
+  margin-left: 5px;
+  color: #68d1f6;
 `
 
 const PlayerPortrait = styled.img`
@@ -284,6 +304,9 @@ const HeroHeader = styled.div`
   & > p:nth-child(1) {
     grid-column-start: 2;
   }
+  & > p {
+    cursor: pointer;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -299,6 +322,12 @@ const HeroText = styled.p`
   font-size: 0.7rem;
   padding-left: 4px;
   text-align: center;
+  color: ${({ rateColor }) => {
+    if (rateColor !== undefined) {
+      return rateColor ? "rgb(102, 187, 106)" : "rgb(255, 76, 76)";
+    }
+  }};
+
 `
 
 const UserInfoText = styled.p`
@@ -326,6 +355,7 @@ const PeerHeader = styled.div`
   & > h3:nth-child(1) {
     grid-column-start: 2;
   }
+  cursor: pointer;
 `
 
 const PeerInfoText = styled.h3`
@@ -342,6 +372,9 @@ const PeerText = styled.p`
   margin: auto 0;
   width: 100%;
   font-size: 0.7rem;
-  padding-left: 4px;
   text-align: center;
+`
+
+const PeerRateText = styled.span`
+  color: ${({ rateColor }) => rateColor ? "rgb(102, 187, 106)" : "rgb(255, 76, 76)"};
 `

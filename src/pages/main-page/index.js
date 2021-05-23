@@ -73,7 +73,6 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
 
   return (
     <>  
-      <MainPageHeader>Inhouse Stats For Animals</MainPageHeader>
       <MainContainer> 
         <MainPageSubheader>🗣️: {bronsonQuote}</MainPageSubheader>
         <form onSubmit={handleSubmit}>
@@ -99,15 +98,6 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
 }
 
 export default MainPage;
-
-const MainPageHeader = styled.h1`
-  background-color: rgba(0, 0, 0, 0.37) !important;
-  linear-gradient(to right, rgb(26, 43, 62), rgb(20, 30, 48));
-  text-align: center;
-  color: white;
-  padding: 50px;
-  margin: 0;
-`
 
 const MainPageSubheader = styled.h2`
   margin: 50px auto;

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import {
+  Link,
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import MainPage from "./pages/main-page";
 import UserPage from "./pages/user";
@@ -35,6 +36,9 @@ const App = () => {
     <>
       <GlobalStyle />
       <Router basename={process.env.PUBLIC_URL}>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Header>Inhouse Stats For Animals</Header>
+        </Link>
         <Switch>
           <Route exact path="/">
             <MainPage 
@@ -63,4 +67,13 @@ const GlobalStyle = createGlobalStyle`
     background-color: #16283e;
     color: #FFFFFF;
   }
+`
+
+  const Header = styled.h1`
+    background-color: rgba(0, 0, 0, 0.37) !important;
+    linear-gradient(to right, rgb(26, 43, 62), rgb(20, 30, 48));
+    text-align: center;
+    color: white;
+    padding: 50px;
+    margin: 0;
 `

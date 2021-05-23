@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components"
 
-import { nameLegend, pictureLegend } from '../../util/legends';
+import { nameLegend, pictureLegend, portraitLegend } from '../../util/legends';
 
 const MatchDetails = ({ matchDetails }) => {
   const radiantTeam = matchDetails.filter((_, index) => index % 2 === 0);
@@ -21,7 +21,12 @@ const MatchDetails = ({ matchDetails }) => {
         <RadiantTeamContainer key={damage}>
           <TeamHeader>
             <img src={pictureLegend[hero]} height={32} style={{ margin: "0 auto"}} alt={`${nameLegend[hero]} icon`} />
-            <LinkText to={`/user/${username}`}>{nameLegend[username] ? nameLegend[username] : username}</LinkText>
+            <LinkText to={`/user/${username}`}>
+              {nameLegend[username] ? nameLegend[username] : username}
+              {portraitLegend[username] &&
+                <VerifiedIcon className="fas fa-check fa-xs" title="This user has been verified."></VerifiedIcon>
+              }
+            </LinkText>
             <DetailText>{kills}</DetailText>
             <DetailText>{deaths}</DetailText>
             <DetailText>{assists}</DetailText>
@@ -33,7 +38,12 @@ const MatchDetails = ({ matchDetails }) => {
         <DireTeamContainer key={damage}>
           <TeamHeader>
             <img src={pictureLegend[hero]} height={32} style={{ margin: "0 auto"}} alt={`${nameLegend[hero]} icon`}  />
-            <LinkText to={`/user/${username}`}>{username}</LinkText>
+            <LinkText to={`/user/${username}`}>
+              {nameLegend[username] ? nameLegend[username] : username}
+              {portraitLegend[username] &&
+                <VerifiedIcon className="fas fa-check fa-xs" title="This user has been verified."></VerifiedIcon>
+              }
+            </LinkText>
             <DetailText>{kills}</DetailText>
             <DetailText>{deaths}</DetailText>
             <DetailText>{assists}</DetailText>
@@ -52,7 +62,7 @@ const MatchContainer = styled.div`
 `
 
 const RadiantTeamContainer = styled.div`
-  background-color: rgb(0, 51, 0, 0.2);
+  background: rgba(146,165,37,0.12);
 `
 
 const TeamHeader = styled.div`
@@ -76,4 +86,9 @@ const LinkText = styled(Link)`
   margin: auto 0;
   color: rgb(102, 187, 255);
   text-decoration: none;
+`
+
+const VerifiedIcon = styled.i`
+  margin-left: 3px;
+  color: #68d1f6;
 `

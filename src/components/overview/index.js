@@ -51,8 +51,7 @@ const InformationContainer = styled.div`
   justify-content: space-between;
   border: 1.5px solid rgba(255, 255, 255, 0.05);
   padding: 5px 10px;
-  background-color: #16283e;
-
+  // background-color: #16283e;
   &:hover {
     cursor:pointer;
   }
