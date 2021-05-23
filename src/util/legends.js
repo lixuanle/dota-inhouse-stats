@@ -220,7 +220,7 @@ export const portraitLegend = {
   'jeleto': "/dota-inhouse-stats/saif.png",
   'nixnala': "/dota-inhouse-stats/alan.png",
   'geese': "/dota-inhouse-stats/holden.png",
-  'coolgave': "/dota-inhouse-stats/gavin.png",
+  'coolgav': "/dota-inhouse-stats/gavin.png",
   'pain peko': "/dota-inhouse-stats/denzel.png",
   'justin': "/dota-inhouse-stats/justin.png",
   'lester': "/dota-inhouse-stats/lester.png",
