@@ -17,7 +17,7 @@ const readCSV = async () => {
 
     for (const row of csvData.slice(1)) {
 
-      if (row[1] !== "Winner: ") {
+      if (row[1].indexOf('Winner')) {
 
         // In hindsight I could probably destruct the array and make one of these variables for each item instead of doing row[i] all the time but future me can deal with that.
         const radiantPlayer = row[1].toLowerCase();
