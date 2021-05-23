@@ -13,6 +13,10 @@ const UserPage = ({ individualStats }) => {
   const [sortCategory, setSortCategory] = useState("")
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id])
+
+  useEffect(() => {
     if (individualStats) {
       const { heroesPlayed, peers } = individualStats[id];
       const heroData = [];

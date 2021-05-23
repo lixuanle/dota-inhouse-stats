@@ -32,6 +32,10 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
   let history = useHistory();
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
+  useEffect(() => {
     setBronsonQuote(bronsonTicks[Math.floor(Math.random() * bronsonTicks.length + 1)]);
   }, [setMatchHistory])
 
