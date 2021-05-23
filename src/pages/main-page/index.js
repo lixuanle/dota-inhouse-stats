@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components"
 
 import MatchOverview from "../../components/overview"
+import { heroLegend } from "../../util/legends";
 
 const bronsonTicks = [
   "Paper, Nala",
@@ -20,11 +21,13 @@ const bronsonTicks = [
   "Should've bought Safemoon when I told you guys",
   "🥁 REMIA 🥁 REMIA 🥁",
   "Not the sannin man",
+  "Fuck a Papa Doc, fuck a clock, fuck everybody",
 ]
 
 const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats }) => {
   const [ searchText, setSearchText ] = useState("");
   const [ bronsonQuote, setBronsonQuote ] = useState("");
+  const [ warningMessage, setWarningMessage ] = useState(false);
 
   let history = useHistory();
 
@@ -36,14 +39,19 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
     setMatchHistory(initialData);
   }, [initialData, setMatchHistory])
 
-  const handleChange = e => {
-    setSearchText(e.target.value);
+  const handleChange = ({ target: { value }}) => {
+    setSearchText(value);
+    setWarningMessage(false);
     let filteredResult = [];
-    if (searchText.length > 1) {
+    if (value.length >= 1) {
       for (const game of initialData) {
         for (const user of game) {
-          if (user["username"].toLowerCase().indexOf(searchText.toLowerCase()) > -1 ) {
+          if (user["username"].toLowerCase().indexOf(value.toLowerCase()) > -1 ) {
             filteredResult.push(game);
+            break;
+          } else if (user["hero"].toLowerCase().indexOf(value.toLowerCase()) > -1 || heroLegend[user["hero"]].toLowerCase().indexOf(value.toLowerCase()) > -1) {
+            filteredResult.push(game);
+            break;
           }
         }
       }
@@ -56,7 +64,10 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
   const handleSubmit = e => {
     e.preventDefault();
     if (individualStats[searchText]) {
+      setWarningMessage(false);
       history.push(`/user/${searchText}`)
+    } else {
+      setWarningMessage(true);
     }
   }
 
@@ -66,15 +77,22 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
       <MainContainer> 
         <MainPageSubheader>🗣️: {bronsonQuote}</MainPageSubheader>
         <form onSubmit={handleSubmit}>
-          <SearchBar type="text" value={searchText} onChange={handleChange} placeholder="Search by name.."/>
+          <SearchBar type="text" value={searchText} onChange={handleChange} placeholder="Search by name or hero.."/>
+          {warningMessage && 
+            <p style={{ color: "#B00020", margin: "0" }}>Player "{searchText}" does not exist!</p>
+          }
         </form>
-        {matchHistory?.map((game, index) => (
-          <MatchOverview 
-            matchDetails={game}
-            index={index}
-            key={index}
-          />
-        ))}
+        <MatchHistoryContainer>
+          <p>{initialData.length} total games recorded.</p>
+          <p>Searching for games containing player: { searchText.length >= 1 ? searchText : "" }</p>
+          {matchHistory?.map((game, index) => (
+            <MatchOverview 
+              matchDetails={game}
+              index={index}
+              key={index}
+            />
+          ))}
+        </MatchHistoryContainer>
       </MainContainer>
     </>
   )
@@ -83,10 +101,12 @@ const MainPage = ({ initialData, matchHistory, setMatchHistory, individualStats 
 export default MainPage;
 
 const MainPageHeader = styled.h1`
-  background-color: #24292e;
+  background-color: rgba(0, 0, 0, 0.37) !important;
+  linear-gradient(to right, rgb(26, 43, 62), rgb(20, 30, 48));
   text-align: center;
   color: white;
   padding: 50px;
+  margin: 0;
 `
 
 const MainPageSubheader = styled.h2`
@@ -110,5 +130,10 @@ const SearchBar = styled.input`
 const MainContainer = styled.div`
   max-width: 700px;
   margin: 0 auto;
-  background-color: 
+  padding: 30px;
+`
+
+const MatchHistoryContainer = styled.div`
+  background-color: #16283e;
+  padding: 15px;
 `

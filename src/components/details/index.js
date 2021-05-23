@@ -21,7 +21,7 @@ const MatchDetails = ({ matchDetails }) => {
         <RadiantTeamContainer key={damage}>
           <TeamHeader>
             <img src={pictureLegend[hero]} height={32} style={{ margin: "0 auto"}} alt={`${nameLegend[hero]} icon`} />
-            <Link style={{ textAlign: "center", fontSize: "0.8rem", margin: "auto 0" }} to={`/user/${username}`}>{nameLegend[username] ? nameLegend[username] : username}</Link>
+            <LinkText to={`/user/${username}`}>{nameLegend[username] ? nameLegend[username] : username}</LinkText>
             <DetailText>{kills}</DetailText>
             <DetailText>{deaths}</DetailText>
             <DetailText>{assists}</DetailText>
@@ -33,7 +33,7 @@ const MatchDetails = ({ matchDetails }) => {
         <DireTeamContainer key={damage}>
           <TeamHeader>
             <img src={pictureLegend[hero]} height={32} style={{ margin: "0 auto"}} alt={`${nameLegend[hero]} icon`}  />
-            <Link style={{ textAlign: "center", fontSize: "0.8rem", margin: "auto 0" }} to={`/user/${username}`}>{username}</Link>
+            <LinkText to={`/user/${username}`}>{username}</LinkText>
             <DetailText>{kills}</DetailText>
             <DetailText>{deaths}</DetailText>
             <DetailText>{assists}</DetailText>
@@ -68,4 +68,12 @@ const DetailText = styled.p`
   font-size: 0.8rem;
   margin: auto 0;
   text-align: center;
+`
+
+const LinkText = styled(Link)`
+  text-align: center;
+  font-size: 0.8rem;
+  margin: auto 0;
+  color: rgb(102, 187, 255);
+  text-decoration: none;
 `

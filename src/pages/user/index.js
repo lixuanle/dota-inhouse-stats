@@ -109,7 +109,7 @@ const UserPage = ({ individualStats }) => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <MainPageHeader>Inhouse Stats For Animals</MainPageHeader>
         </Link>
-          <UserPageContainer>
+        <UserPageContainer>
           <MainPageSubheader>User stats for: { nameLegend[id] ? nameLegend[id] : id }</MainPageSubheader>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <PlayerPortrait src={portraitLegend[id]} />
@@ -196,15 +196,15 @@ const UserPage = ({ individualStats }) => {
             <h3>Peer Statistics</h3>
             <PeerHeader>
               <PeerInfoText onClick={() => sortArray('gamesPlayed', 'peers')}>Games Played</PeerInfoText>
-              <PeerInfoText onClick={() => sortArray('wins', 'peers')}>Won With</PeerInfoText>
-              <PeerInfoText onClick={() => sortArray('kills', 'peers')}>Lost With</PeerInfoText>
-              <PeerInfoText onClick={() => sortArray('deaths', 'peers')}>Won Against</PeerInfoText>
-              <PeerInfoText onClick={() => sortArray('assists', 'peers')}>Lost Against</PeerInfoText>
+              <PeerInfoText onClick={() => sortArray('wonWith', 'peers')}>Won With</PeerInfoText>
+              <PeerInfoText onClick={() => sortArray('lostWith', 'peers')}>Lost With</PeerInfoText>
+              <PeerInfoText onClick={() => sortArray('wonAgainst', 'peers')}>Won Against</PeerInfoText>
+              <PeerInfoText onClick={() => sortArray('lostAgainst', 'peers')}>Lost Against</PeerInfoText>
             </PeerHeader>
             {sortedPeerData?.map(({ peerName, played, wonWith, lostWith, wonAgainst, lostAgainst }, index) => {
               return (
                 <PeerContainer>
-                  <Link to={`/user/${peerName}`}>{peerName}</Link>
+                  <PeerLink to={`/user/${peerName}`}>{peerName}</PeerLink>
                   <PeerText>{played}</PeerText>
                   <PeerText>{wonWith}({!isNaN(wonWith/(wonWith + lostWith)) ? (wonWith/(wonWith + lostWith) * 100).toFixed(2) : 0 }%)</PeerText>
                   <PeerText>{lostWith}({!isNaN(lostWith/(wonWith + lostWith)) ? (lostWith/(wonWith + lostWith) * 100).toFixed(2) : 0 }%)</PeerText>
@@ -227,12 +227,13 @@ const MainPageHeader = styled.h1`
   text-align: center;
   color: white;
   padding: 50px;
+  margin: 0;
 `
 
 const UserPageContainer = styled.div`
   max-width: 750px;
   margin: 0 auto;
-  background-color: 
+  padding: 30px;
 `
 
 const MainPageSubheader = styled.h2`
@@ -329,6 +330,12 @@ const PeerHeader = styled.div`
 
 const PeerInfoText = styled.h3`
   text-align: center;
+`
+
+const PeerLink = styled(Link)`
+  color: rgb(102, 187, 255);
+  text-decoration: none;
+  font-size: 0.8rem;
 `
 
 const PeerText = styled.p`

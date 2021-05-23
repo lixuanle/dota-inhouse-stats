@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { createGlobalStyle } from 'styled-components'
 
 import MainPage from "./pages/main-page";
 import UserPage from "./pages/user";
@@ -31,25 +32,35 @@ const App = () => {
   }, [])
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <Switch>
-        <Route exact path="/">
-          <MainPage 
-            matchHistory={matchHistory}
-            initialData={initialData}
-            setMatchHistory={setMatchHistory}
-            individualStats={individualStats}
-          />
-        </Route>
-        <Route exact path={`/user/:id`}>
-          <UserPage 
-            individualStats={individualStats}
-            initialData={initialData}
-          />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <GlobalStyle />
+      <Router basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route exact path="/">
+            <MainPage 
+              matchHistory={matchHistory}
+              initialData={initialData}
+              setMatchHistory={setMatchHistory}
+              individualStats={individualStats}
+            />
+          </Route>
+          <Route exact path={`/user/:id`}>
+            <UserPage 
+              individualStats={individualStats}
+              initialData={initialData}
+            />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
 export default App;
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #16283e;
+    color: #FFFFFF;
+  }
+`

@@ -47,10 +47,11 @@ const MatchOverviewContainer = styled.div`
 
 const InformationContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  border: 1px solid #eaeae1;
+  border: 1.5px solid rgba(255, 255, 255, 0.05);
   padding: 5px 10px;
-  background-color: #fafbfc;
+  background-color: #16283e;
 
   &:hover {
     cursor:pointer;
@@ -64,5 +65,6 @@ const HeroIcon = styled.img`
 const DownArrow = styled.img`
   width: 32px;
   height: 32px;
-  transform: ${({ isOpen }) => isOpen ? "rotate(180deg)" : ""}
+  transform: ${({ isOpen }) => isOpen ? "rotate(180deg)" : ""};
+  color: white;
 `
